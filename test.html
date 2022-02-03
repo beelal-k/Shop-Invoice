@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="test.js"></script>
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <main class="container col-12 mt-5">
+        <!-- <div class="dropdown text-center m-5">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Hello</a>
+                <a class="dropdown-item" href="#">sello</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div> -->
+
+        <div class="select text-center"><select name="Items" id="prod" class="col-3 text-center">
+                <option value="tea" onchange="lipton()">Lipton</option>
+                <option value="coff" onchange="lipton()">Coffee</option>
+                <option value="Bisc" onchange="lipton()">Biscuit</option>
+            </select>
+        </div>
+            <br>
+            <input class="form-control col-3" id="quant" onchange="lipton()" type="number" placeholder="Enter Amount">
+            <br>
+            <input class="form-control col-3 " id="price" type="text" placeholder="Price" >
+            <br>
+            <input class="form-control col-3 " id="subtotal" type="number" placeholder="Subtotal" readonly>
+            <br>
+            <button class="btn btn-primary" onclick="test()">Calculate</button>
+        <div class="pt-5 col-6 offset-3 text-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
