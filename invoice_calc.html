@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="invoice_calc.js"></script>
+    <link rel="stylesheet" href="invoice_calc.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <main class="container col-12">
+        <!-- <div class="dropdown text-center m-5">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Hello</a>
+                <a class="dropdown-item" href="#">sello</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div> -->
+
+        <form>
+            <div class="select text-center">
+                <select name="Items" id="prod" class="col-3 offset-3 text-center" onchange="price()">
+                    <option value="none">Select Item</option>
+                    <option value="tea" data-opt>Lipton</option>
+                    <option value="coff" data-opt>Coffee</option>
+                    <option value="bisc" data-opt>Biscuit</option>
+                </select>
+        </form>
+        </div>
+        <br>
+        <input class="form-control col-2 offset-3" id="quant" type="number" placeholder="Enter Amount">
+        <br>
+        <div class="border offset-3" id="price">
+            <font id="price_txt">0</font>
+        </div>
+        <br>
+        <div class="border offset-3" id="subtotal">
+            <font id="subtotal_txt">Subtotal</font>
+        </div>
+        <br>
+        <br>
+        <div id="test" readonly></div>
+        <button class="btn btn-primary offset-4  w-25" onclick="subtotal()">Calculate</button>
+        <div class="pt-5 col-6 offset-3 text-center">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="col-md-2 offset-7">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Discount (20% $)</th>
+                    <td class="col-md-6"  id="disc"></td>
+                </tr>
+                <tr>
+                    <th>Tax ($)</th>
+                    <td id="tax"></td>
+                </tr>
+                <tr>
+                    <th>Total ($)</th>
+                    <td><font id="total"></font></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

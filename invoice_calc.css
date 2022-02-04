@@ -1,0 +1,27 @@
+
+#price, #subtotal{
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    background-color: #E9ECEF;
+    width: 263px;
+
+}
+
+#prod{
+    position: relative;
+    top: 50px;
+    right: 10px;
+}
+
+
+#price_txt, #subtotal_txt{
+    margin-left: 13px;
+    
+}
+
+.btn{
+    position: relative;
+    left: 100px;
+}
+
